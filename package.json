@@ -1,0 +1,52 @@
+{
+  "name": "appfreelist",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "app-store-scraper": "^0.16.3",
+    "cors-anywhere": "^0.4.3",
+    "fetch-json": "^2.2.9",
+    "flatlist-react": "^1.4.3",
+    "http-proxy-middleware": "^1.0.6",
+    "itunes-search-client": "^1.0.0",
+    "jsonp": "^0.2.1",
+    "ky": "^0.24.0",
+    "lodash": "^4.17.20",
+    "node-fetch": "^2.6.1",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-loading": "^2.0.3",
+    "react-redux": "^7.2.1",
+    "react-scripts": "3.4.4",
+    "react-star-ratings": "^2.3.0",
+    "react-visibility-sensor": "^5.1.1",
+    "redux": "^4.0.5"
+  },
+  "scripts": {
+    "sass": "node-sass -w ./src -o ./src --recursive",
+    "start": "yarn run startServer ",
+    "startServer": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

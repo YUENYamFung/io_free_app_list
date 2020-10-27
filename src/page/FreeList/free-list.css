@@ -1,0 +1,33 @@
+.free-list {
+  max-width: Max(100vw, 800px); }
+
+.free-list .hide {
+  display: none; }
+
+.free-list .anima-stop {
+  animation: animitionR2L 2s cubic-bezier(0, 0, 0, 0.95) forwards; }
+
+.free-list .flex-col {
+  display: flex;
+  flex-direction: row;
+  position: relative; }
+
+.free-list .flex-row {
+  display: flex;
+  flex-direction: row;
+  position: relative; }
+
+.free-list .app-star > div {
+  font-size: 8px; }
+
+.free-list img.odd {
+  border-radius: 15px; }
+
+.free-list img.even {
+  border-radius: 50%; }
+
+@keyframes animitionR2L {
+  0% {
+    transform: translate(0px, 100px); }
+  100% {
+    transform: translate(0px, 0px); } }

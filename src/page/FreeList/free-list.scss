@@ -1,0 +1,45 @@
+.free-list {
+    .hide {
+        display: none;
+    }
+    max-width: Max(100vw, 800px);
+    .anima-stop {
+        animation: animitionR2L 2s cubic-bezier(0, 0, 0, 0.95) forwards;
+    }
+
+    .flex-col {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .app-star > div {
+        font-size: 8px;
+    }
+
+    img {
+        // &:nth-child(odd),
+        &.odd {
+            border-radius: 15px;
+        }
+        // &:nth-child(even),
+        &.even {
+            border-radius: 50%;
+        }
+    }
+
+    @keyframes animitionR2L {
+        0% {
+            transform: translate(0px, 100px);
+        }
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+}
