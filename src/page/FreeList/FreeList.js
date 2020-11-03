@@ -6,9 +6,6 @@ import FreeItem from './FreeItem.js';
 import './free-list.css'
 import Loading from '../Loading.js';
 
-// import api from '../utils/api.js'
-// const api = React.lazy(() => import('../utils/api.js'));
-
 function FreeList(params) {
 
   const list = useSelector((state) => state.AppFreeList)

@@ -11,10 +11,6 @@ const getAppInfo = (id) => {
             return ({ ...results[0] })
         }
     })
-    // .then(e => {
-    //     console.log(e);
-    //     return e
-    // })
 }
 
 export default getAppInfo;

@@ -1,15 +1,3 @@
-// const request = require('request'); // This package has been deprecated
-
-// CORS problem
-// var fetchJson = require('fetch-json');
-
-// still not working
-// jsonp(url, opts, fn)
-// import jsonp from 'jsonp';
-
-
-// http2 error
-// const got
 import ky from 'ky';
 
 const getJSON = (url) => {

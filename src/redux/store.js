@@ -1,6 +1,4 @@
 import { createStore } from 'redux'
-// import chunk from '../utils/chuck.js'
-// import lodash from 'lodash'
 
 export const types = {
     updateAppList: 'AppListDataUpdate',
@@ -8,7 +6,6 @@ export const types = {
     updateAppRecommend: 'AppRecommendDataUpdate',
     setIsFetchAppFree: 'setIsFetchAppFree',
     setSearch: 'setSearch',
-    // viewMaxIdx: '',
 }
 
 function reducer(state = {}, action) {
