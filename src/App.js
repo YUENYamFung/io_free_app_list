@@ -1,14 +1,12 @@
-import React, { lazy, Suspense, useEffect, useState } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import './App.css';
-import { Provider, useDispatch, useSelector } from 'react-redux'
+import { Provider } from 'react-redux'
 import store, { types } from './redux/store.js';
 import api from './utils/api.js';
 
 import Search from './page/Search/Search.js';
 import Loading from './page/Loading';
 import { debounce } from 'lodash';
-// import RecommandList from './page/RecommandList';
-// import FreeList from './page/FreeList';
 const FreeListLazy = lazy(() => import('./page/FreeList/FreeList.js'));
 const RecommandListLazy = lazy(() => import('./page/RecommandList/RecommandList.js'));
 
@@ -30,12 +28,9 @@ function App() {
   const fetcFreeAppData = (count) => {
     // API
     api.getAppList(count).then(({ data }) => {
-      // let addData = chuck(data).pop();
-      // console.log(addData);
       dispatch({
         type: types.updateAppList,
         data
-        // data: addData
       });
     })
   };
@@ -58,34 +53,16 @@ function App() {
     window.onscroll = debounce(() => {
       const isFetching = store.getState().isFetchAppFree;
       const nElement = store.getState().AppFreeList.length;
-      // console.log({ nElement });
       if (isFetching) {
         return
       };
       let comingEnd = isComingEnd()
-      // console.log({ comingEnd });
       if (comingEnd) {
         dispatch({ type: types.setIsFetchAppFree, data: true });
         fetchMoreFreeAppData(Math.min(maxCount, nElement + 10))
       }
     }, 10)
   })
-
-  // const
-  //   useEffect(() => {
-  //     setIsFetchAppFree
-  //   })
-  // const fetchingFreeApps = useSelector(state => state.isFetchAppFree);
-
-  // useEffect(() => {
-  //   if (fetchingFreeApps) {
-  //     return;
-  //   }
-  //   if (!isComingEnd) {
-  //     return
-  //   }
-
-  // })
 
   return (
     <div className="App">

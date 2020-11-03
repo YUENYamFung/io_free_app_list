@@ -1,5 +1,5 @@
 
-import React, { lazy, Suspense, useState, useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import search from '../../utils/search.js';
 
