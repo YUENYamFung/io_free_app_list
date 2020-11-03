@@ -2,29 +2,37 @@
     .hide {
         display: none;
     }
-    max-width: 100vw;
+    width: 100%;
     padding: 0;
+    .recommand-full-list-block {
+        height: 200px;
+        overflow: hidden;
+    }
     .recommand-full-list {
         &::-webkit-scrollbar {
             width: 0 !important;
-        } 
+        }
         -ms-overflow-style: none;
         overflow: -moz-scrollbars-none;
 
-        display: flex;
+        padding: 0;
+
         flex-direction: row;
         position: relative;
-        max-width: 100vw;
+        max-width: 100%;
+
+        display: flex;
+        flex-wrap: nowrap;
         overflow-x: scroll;
         .block {
-            .image{
+            .image {
                 border-radius: 15px;
             }
             padding: 5px;
         }
     }
     .headline {
-        width: auto;
+        width: fit-content;
         text-align: left;
         padding: 10px;
         font-size: 2em;

@@ -1,9 +1,23 @@
+.dev * {
+  position: relative;
+  outline: 1px solid red; }
+
 .App {
   text-align: center;
   min-height: 100vh; }
 
 .app-star > div {
   font-size: 8px; }
+
+.flex-col {
+  display: flex;
+  flex-direction: row;
+  position: relative; }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  position: relative; }
 
 .app-type {
   color: grey;
